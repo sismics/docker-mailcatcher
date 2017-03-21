@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mailcatcher:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: sismics/mailcatcher:0.6.5
+    restart: always
+    container_name: mailcatcher
+    network_mode: bridge
